@@ -1,15 +1,23 @@
 name: hexlet-ci-app
+
+on: [push]
+
 jobs:
   build: 
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+   
     steps:
       # Ставим зависимости
       - run: npm install
       # Запускаем линтер
       - run: npm run lint
-      # Запускаем тесты
-      # у шагов может быть имя, иногда это помогает отладке
-      # имя выводится на Github при просмотре сборки
+      # Звпускаем тесты
       - name: run tests
+<<<<<<< HEAD
         run: npm test  
+=======
+        run: npm test 
+>>>>>>> 77ddeeda541068f61cfa94f445e3a32d70eead49
