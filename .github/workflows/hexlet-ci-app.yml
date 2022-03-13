@@ -14,10 +14,8 @@ jobs:
       - run: npm install
       # Запускаем линтер
       - run: npm run lint
-      # Звпускаем тесты
+      # Запускаем тесты
       - name: run tests
-<<<<<<< HEAD
         run: npm test  
-=======
-        run: npm test 
->>>>>>> 77ddeeda541068f61cfa94f445e3a32d70eead49
+      
+
